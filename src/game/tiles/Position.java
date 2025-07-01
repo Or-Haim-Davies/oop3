@@ -11,4 +11,14 @@ public class Position {
     public void setX(int x){this.x=x;}
     public int getY(){return y;}
     public void setY(int y){this.y=y;}
+
+    public double distance(Position other) {
+        return Math.sqrt(Math.pow(this.x - other.x, 2)
+                + Math.pow(this.y - other.y, 2));
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + "," + y + ")";
+    }
 }
