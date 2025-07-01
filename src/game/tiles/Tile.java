@@ -11,8 +11,22 @@ public abstract class Tile {
         this.tile=tile;
         this.position=new Position(x,y);
     }
+
     public Tile(){
-        tile='*';
+        tile='.';
         position= new Position(0,0);
     }
+
+    public void setPosition(Position position){
+        this.position=position;
+    }
+    public Position getPosition() { return position; }
+    public char getTileChar() { return tile; }
+
+
+    @Override
+    public String toString() {
+        return String.valueOf(tile);
+    }
+
 }
